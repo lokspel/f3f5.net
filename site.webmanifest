@@ -1,7 +1,6 @@
 {
-  "name": "F3F5 Anarchy",
-  "short_name": "F3F5",
-  "description": "No rules Minecraft server since May 2025",
+  "name": "f3f5",
+  "short_name": "f3f5",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,8 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#dc2626",
-  "background_color": "#08090a",
-  "display": "standalone",
-  "start_url": "/"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }
