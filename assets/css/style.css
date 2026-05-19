@@ -46,7 +46,7 @@ body {
 section { padding: 100px 0; }
 
 .section-header { margin-bottom: 60px; max-width: 600px; }
-.section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.03em; }
+.section-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; letter-spacing: 0; }
 .section-header p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
 
 .gradient-text {
@@ -126,7 +126,7 @@ section { padding: 100px 0; }
 
 .hero h1 {
     font-size: 4.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;
-    letter-spacing: -2px;
+    letter-spacing: 0;
     background: linear-gradient(to bottom, #fff 40%, #7f1d1d 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
@@ -243,7 +243,197 @@ footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: cente
 }
 .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
+@media (min-width: 1440px) {
+    .container {
+        max-width: clamp(1200px, calc(39.17vw + 636px), 2140px);
+        padding: 0 clamp(24px, calc(1vw + 9.6px), 48px);
+    }
+
+    section { padding: clamp(100px, calc(3.75vw + 46px), 190px) 0; }
+
+    .section-header {
+        max-width: clamp(600px, calc(15.83vw + 372px), 980px);
+        margin-bottom: clamp(60px, calc(1.67vw + 36px), 100px);
+    }
+    .section-header h2 { font-size: clamp(2.5rem, calc(1.24rem + 1.4vw), 4.6rem); }
+    .section-header p { font-size: clamp(1.1rem, calc(0.8rem + 0.33vw), 1.6rem); }
+
+    .spotlight-group {
+        gap: clamp(24px, calc(1vw + 9.6px), 48px);
+        grid-template-columns: repeat(auto-fit, minmax(clamp(300px, calc(8.33vw + 180px), 500px), 1fr));
+    }
+
+    .card {
+        padding: clamp(40px, calc(1.25vw + 22px), 70px);
+        border-radius: clamp(24px, calc(0.17vw + 21.6px), 28px);
+    }
+    .card-inner { border-radius: clamp(23px, calc(0.17vw + 20.6px), 27px); }
+    .card-icon {
+        width: clamp(50px, calc(1.33vw + 30.8px), 82px);
+        height: clamp(50px, calc(1.33vw + 30.8px), 82px);
+        font-size: clamp(1.2rem, calc(0.81rem + 0.43vw), 1.85rem);
+        margin-bottom: clamp(24px, calc(0.58vw + 15.6px), 38px);
+    }
+    .card h3 { font-size: clamp(1.25rem, calc(0.83rem + 0.47vw), 1.95rem); }
+    .card p { font-size: clamp(0.95rem, calc(0.71rem + 0.27vw), 1.35rem); }
+
+    .hero { padding-top: clamp(80px, calc(1.67vw + 56px), 120px); }
+    .hero h1 {
+        font-size: clamp(4.5rem, calc(1.8rem + 3vw), 9rem);
+        margin-bottom: clamp(24px, calc(0.58vw + 15.6px), 38px);
+    }
+    .hero-desc {
+        max-width: clamp(600px, calc(18.33vw + 336px), 1040px);
+        font-size: clamp(1rem, calc(0.55rem + 0.5vw), 1.75rem);
+        line-height: 1.7;
+        margin-bottom: clamp(40px, calc(0.58vw + 31.6px), 54px);
+    }
+    .btn-copy {
+        padding: clamp(16px, calc(0.33vw + 11.2px), 24px) clamp(32px, calc(0.92vw + 18.8px), 54px);
+        font-size: clamp(1rem, calc(0.7rem + 0.33vw), 1.5rem);
+        gap: clamp(12px, calc(0.17vw + 9.6px), 16px);
+    }
+
+    .funding-grid {
+        gap: clamp(40px, calc(1.33vw + 20.8px), 72px);
+        margin-top: clamp(40px, calc(0.67vw + 30.4px), 56px);
+    }
+    .funding-box {
+        padding: clamp(32px, calc(1.33vw + 12.8px), 64px);
+        border-radius: clamp(20px, calc(0.17vw + 17.6px), 24px);
+    }
+    .box-title { font-size: clamp(1.5rem, calc(0.96rem + 0.6vw), 2.4rem); }
+    .text-muted {
+        font-size: clamp(1rem, calc(0.79rem + 0.23vw), 1.35rem);
+        line-height: 1.65;
+    }
+    .price-tag {
+        font-size: clamp(2rem, calc(1.1rem + 1vw), 3.5rem);
+        margin: clamp(16px, calc(0.33vw + 11.2px), 24px) 0;
+    }
+    .sub-price { font-size: clamp(0.9rem, calc(0.84rem + 0.07vw), 1.05rem); }
+    .warning-box {
+        padding: clamp(16px, calc(0.42vw + 10px), 26px);
+        font-size: clamp(0.9rem, calc(0.67rem + 0.25vw), 1.28rem);
+        border-radius: clamp(12px, calc(0.17vw + 9.6px), 16px);
+    }
+    .btn-kofi {
+        padding: clamp(18px, calc(0.17vw + 15.6px), 22px) clamp(32px, calc(0.25vw + 28.4px), 38px);
+        font-size: clamp(1rem, calc(0.79rem + 0.23vw), 1.35rem);
+    }
+
+    .reward-item {
+        gap: clamp(16px, calc(0.33vw + 11.2px), 24px);
+        margin-bottom: clamp(24px, calc(0.33vw + 19.2px), 32px);
+        padding-bottom: clamp(24px, calc(0.33vw + 19.2px), 32px);
+    }
+    .reward-icon { font-size: clamp(1.5rem, calc(1.11rem + 0.43vw), 2.15rem); }
+    .reward-title { font-size: clamp(1.1rem, calc(0.74rem + 0.4vw), 1.7rem); }
+    .reward-desc { font-size: clamp(0.9rem, calc(0.69rem + 0.23vw), 1.25rem); }
+    .badge {
+        font-size: clamp(0.75rem, calc(0.66rem + 0.1vw), 0.9rem);
+        padding: clamp(2px, calc(0.08vw + 0.8px), 4px) clamp(8px, calc(0.08vw + 6.8px), 10px);
+    }
+    .claim-instructions { font-size: clamp(0.9rem, calc(0.71rem + 0.22vw), 1.22rem); }
+    .code-block {
+        padding: clamp(16px, calc(0.25vw + 12.4px), 22px);
+        font-size: clamp(0.85rem, calc(0.66rem + 0.22vw), 1.16rem);
+    }
+
+    .social-grid {
+        gap: clamp(24px, calc(1vw + 9.6px), 48px);
+        margin-top: clamp(40px, calc(0.67vw + 30.4px), 56px);
+    }
+    .social-card {
+        padding: clamp(30px, calc(1.08vw + 14.4px), 56px);
+        border-radius: clamp(20px, calc(0.17vw + 17.6px), 24px);
+        gap: clamp(20px, calc(0.33vw + 15.2px), 28px);
+    }
+    .social-card i { font-size: clamp(2.5rem, calc(1.6rem + 1vw), 4rem); }
+    .social-info h3 { font-size: clamp(1.2rem, calc(0.81rem + 0.43vw), 1.85rem); }
+    .social-info p { font-size: clamp(0.9rem, calc(0.67rem + 0.27vw), 1.28rem); }
+
+    .contact-label { font-size: clamp(1rem, calc(0.79rem + 0.23vw), 1.35rem); }
+    .big-email { font-size: clamp(1.5rem, calc(0.87rem + 0.7vw), 2.55rem); }
+
+    nav { padding: clamp(24px, calc(0.58vw + 15.6px), 38px) 0; }
+    nav.scrolled { padding: clamp(16px, calc(0.33vw + 11.2px), 24px) 0; }
+    .logo { font-size: clamp(1.5rem, calc(1.02rem + 0.53vw), 2.3rem); }
+    .nav-links { gap: clamp(24px, calc(1vw + 9.6px), 48px); }
+    .nav-links a { font-size: clamp(0.9rem, calc(0.66rem + 0.27vw), 1.3rem); }
+    footer {
+        padding: clamp(60px, calc(0.75vw + 49.2px), 78px) 0;
+        font-size: clamp(0.9rem, calc(0.69rem + 0.23vw), 1.25rem);
+    }
+}
+
 @media (max-width: 900px) {
     .funding-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    body [data-aos][data-aos="fade-left"],
+    body [data-aos][data-aos="fade-right"] {
+        transform: translate3d(0, 24px, 0);
+    }
+
+    body [data-aos][data-aos="fade-left"].aos-animate,
+    body [data-aos][data-aos="fade-right"].aos-animate {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 20px; }
+    section { padding: 80px 0; }
+
+    .nav-inner { gap: 16px; }
+    .nav-links { gap: 18px; }
+    .nav-links a { font-size: 0.86rem; }
+
+    .hero { min-height: 100svh; }
+    .hero-content { padding: 0; }
+    .hero h1 {
+        font-size: 2.9rem;
+        letter-spacing: 0;
+    }
+
+    .section-header { margin-bottom: 44px; }
+    .section-header h2 {
+        font-size: 2rem;
+        letter-spacing: 0;
+    }
+
+    .spotlight-group,
+    .funding-grid,
+    .social-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .card,
+    .funding-box,
+    .social-card {
+        padding: 28px;
+        border-radius: 16px;
+    }
+
+    .card-inner { border-radius: 15px; }
+    .reward-item { gap: 12px; }
+    .big-email { font-size: 1.25rem; overflow-wrap: anywhere; }
+    .code-block { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 340px) {
+    .container { padding: 0 18px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 0.82rem; }
+
+    .hero h1 { font-size: 2.55rem; }
+
+    .card,
+    .funding-box,
+    .social-card {
+        padding: 24px;
+    }
 }
