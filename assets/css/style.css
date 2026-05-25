@@ -82,9 +82,9 @@ section { padding: 100px 0; }
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y), 
-        var(--spotlight-color), 
-        transparent 40%
+            800px circle at var(--mouse-x) var(--mouse-y),
+            var(--spotlight-color),
+            transparent 40%
     );
     z-index: 0; opacity: 0; transition: opacity 0.5s; pointer-events: none;
 }
@@ -127,8 +127,7 @@ section { padding: 100px 0; }
 .hero h1 {
     font-size: 4.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px;
     letter-spacing: 0;
-    background: linear-gradient(to bottom, #fff 40%, #7f1d1d 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 .hero-desc { max-width: 600px; margin: 0 auto 40px auto; color: var(--text-muted); }
 
